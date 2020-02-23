@@ -42,6 +42,7 @@ class LinkedList{
     }
     //removeAt(position):从链表的特定位置移除⼀个元素。
     removeAt(index){
+        // console.log(index,this.count,"ssssssssssss")
         let current=this.head
         if(index<0||index>this.count){
             return undefined
@@ -129,7 +130,9 @@ class LinkedList{
 
     tocenter(){
         if(this.count%2==0){
-            return this.getElementAt(Math.floor((this.count-1)/2))
+            let m=Math.ceil((this.count-1)/2)
+            let n=Math.floor((this.count-1)/2)
+            return this.getElementAt(Math.floor(Math.random()*(m-n+1))+n)
         }else{
             return this.getElementAt((this.count-1)/2)
         }
@@ -139,7 +142,7 @@ class LinkedList{
         let index=this.indexOf(el)
         console.log(index)
         if(index==this.count-1){
-            return "非末尾"
+            return "末尾"
         }else{
             this.remove(el)
         }
@@ -155,5 +158,6 @@ a.push("a")
 a.push("b")
 a.push("c")
 a.push("d")
-console.log(a.delAt("d"))
+console.log(a.tocenter())
+console.log(a.delAt("b"))
 console.log(a.toString())
