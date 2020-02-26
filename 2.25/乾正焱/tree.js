@@ -40,7 +40,7 @@ class Tree{
     }
     searchNode(node,element){
         if(node===null){
-            return '空树'
+            return false;
         }
         if(node.element>element){//去左子树
             this.searchNode(node.left,element)
@@ -121,7 +121,8 @@ let t = new Tree();
 t.insert(6);
 t.insert(2);
 t.insert(9);
-t.remove(2)
+// t.search(2)
+// t.remove(2)
 // t.preOrderTraverse()//6-2-9
 // t.inOrderTraverse()//2-6-9
 // t.postOrderTraverse()//2-9-6
