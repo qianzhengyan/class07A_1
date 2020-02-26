@@ -109,8 +109,37 @@ class Tree{
         return current
     }
 // remove(key):从树中移除某个键。
-    remove(key){
+remove(key){
+    num = this.removeNode(this.root,key)
+    return num
+ }
+ removeNode(node,key){
+     if(node==null){
+         return null
+     }
+     if(node.element>key){
+ 
+     }else if(node.element<ke){
+         node.right = this.removeNode(node.right,key)
+     }else{
+         if(node.left == null && node.right==null){//一
+             node = null
+             return node
+         }
         
-    }
+         if(node.left==null){
+             node = node.right
+             return node
+         }else if(node.right==null){
+             node = node.left
+             return node
+         }
+         
+         const minNode = this.minNode(node.right)
+         node.element = minNode.element
+         node.right = this.removeNode(node.right,minNode.element)
+         return node
+     }
+ }
 
 }
