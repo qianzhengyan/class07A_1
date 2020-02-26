@@ -92,7 +92,7 @@ class Tree{
         if(this.root==null){
             return undefined
         }
-        this.tomin(this.root)
+        return this.tomin(this.root)
     }
     tomin(node){
         if(node.left==null){
@@ -143,3 +143,8 @@ remove(key){
  }
 
 }
+let t= new Tree()
+t.insert(1)
+t.insert(2)
+t.insert(3)
+console.log(t.min())
