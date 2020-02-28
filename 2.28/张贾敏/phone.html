@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用代理模式 实现电话号码的拦截</title>
+</head>
+<body>
+    <script>
+        let ListP=["123456789"];
+        let Aphone=function(phone){
+            console.log("接听电话")
+        }
+        let proxyphone=function(phone){
+            console.log("电话响啦")
+            if(ListP.includes(phone)){
+                Aphone.call(this,phone)
+            }
+        }
+        proxyphone("123456789")
+    </script>
+</body>
+</html>
