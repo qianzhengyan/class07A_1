@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>使用代理模式 实现图片懒加载</title>
+</head>
+<body>
+    <script>
+        let myImage=(function(){
+            let imgNode=document.createElement("img")
+            document.body.appendChild(imgNode)
+            return{
+                setSrc:(src)=>{
+                    imgNode.src=src
+                }
+            }
+        })();
+        let proxyimg=(function(){
+            let img=new Image();
+            img.onload=()=>{
+                myImage.setSrc(img.src)
+            }
+            return {
+                setSrc:(src)=>{
+                    myImage.setSrc("./2.jpg")
+                    img.src=src
+                }
+            }
+        })()
+        proxyimg.setSrc("")
+    </script>
+</body>
+</html>
