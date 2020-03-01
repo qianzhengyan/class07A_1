@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let myImage = (function () {
+            let imgNode = document.createElement('img');
+            document.body.appendChild(imgNode)
+            return {
+                setSrc: (src) => {
+                    imgNode.src = src
+                }
+            }
+        })();
+        let proxyImage = (function () {
+            let img = new Image();
+            img.onload = () => {
+                myImage.setSrc(img.src)
+            }
+            return {
+                setSrc: (src) => {
+                    myImage.setSrc('./gddgb.jpg')
+                    img.src = src
+                }
+            }
+        })();
+        proxyImage.setSrc('https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1582896883220&di=698e0bb7e238835b4bdb1318055b315b&imgtype=0&src=http%3A%2F%2Fpic117.nipic.com%2Ffile%2F20161209%2F24016274_180932467000_2.jpg')
+    </script>
+</body>
+
+</html>
