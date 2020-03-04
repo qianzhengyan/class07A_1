@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="box">
+        <input type="text" v-model="className.name">
+        <h1>{{className.name}}</h1>
+        <h2>{{className.age}}</h2>
+    </div>
+    <script src="./index.js"></script>
+    <script>
+        let vm=new Vue({
+            el:"#box",
+            data:{
+                className:{
+                    name:"郭军强11",
+                    age:20
+                }
+            }
+        })
+    </script>
+</body>
+</html>
