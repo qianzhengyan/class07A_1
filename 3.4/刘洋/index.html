@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="app">
+        
+        <h1>{{data.name}}</h1>
+        <h3>{{data.str}}</h3>
+        <ul>
+            <li>
+                {{data.name}}
+            </li>
+            <li>
+                {{data.str}}
+            </li>
+        </ul>
+        <h3>{{data.str}}</h3>
+        <input type="text" v-model="data.name">
+    </div>
+    <script src="./index.js"></script>
+    <script>
+        let vm=new Vue({
+            el:"#app",
+            data:{
+                data:{
+                    name:"王大锤",
+                    str:"5166"
+                }
+            }
+        })
+    </script>
+</body>
+</html>
