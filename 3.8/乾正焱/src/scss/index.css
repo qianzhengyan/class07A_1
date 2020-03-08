@@ -1,0 +1,81 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+.app {
+  width: 90%;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+.app .header {
+  width: 100%;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+}
+
+.app .header span {
+  margin: 0 20px;
+}
+
+.app .header .active {
+  color: red;
+}
+
+.app .center {
+  flex: 1;
+  display: flex;
+}
+
+.app .center .left {
+  flex: 2;
+  text-align: center;
+}
+
+.app .center .left h3 {
+  line-height: 50px;
+}
+
+.app .center .left b {
+  color: red;
+  font-size: 25px;
+}
+
+.app .center .right {
+  flex: 8;
+}
+
+.app .center .right div {
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+}
+
+.app .center .right div h4 {
+  display: inline-block;
+  margin: 0 15px;
+  font-size: 16px;
+  line-height: 45px;
+  width: 170px;
+}
+
+.app .center .right div span {
+  margin: 0 10px;
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+}
+
+.app .center .right div .red {
+  color: red;
+}
