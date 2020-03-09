@@ -1,0 +1,143 @@
+/* .App {
+  text-align: center; */
+/* }
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+} */
+
+*{
+  padding: 0;
+  margin: 0;
+  list-style:none;
+  text-decoration: none;
+  color: black;
+}
+html,body,.App,.home,#root{
+  width: 100%;
+  height: 100%;
+}
+.App,.home,#root{
+  display: flex;
+  flex-direction: column;
+}
+.main{
+  flex: 1;
+  overflow: auto;
+}
+.footer{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  border-top: 1px solid #ccc;
+}
+
+.lb{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.top{
+  width: 100%; 
+  height: 50px;
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.top>.active{
+  color: red;
+}
+
+.top_main{
+  flex: 1;
+  overflow: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+}
+.left{
+  width: 30%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid #ccc;
+  justify-content: space-around;
+  text-align: center;
+  overflow: hidden;
+ 
+}
+
+.left p{
+padding-top:50px;
+}
+
+.active{
+color: red;
+}
+
+.right{
+  width: 70%;
+  height: 100%;
+  overflow: hidden;
+}
+
+img{
+  width: 100px;
+  height: 100px;
+}
+.dl{
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.dt{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.aa{
+  display: flex;
+}
+.aa>span{
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+}
