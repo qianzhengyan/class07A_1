@@ -1,0 +1,56 @@
+import Mock from 'mockjs'
+
+let data=Mock.mock({
+    "list":[[{
+        id:1,
+        name:"决战中途岛",
+        num:1283.90,
+        flag:false
+    },{
+        id:2,
+        name:"受益人",
+        num:1238.2,
+        flag:false
+    },{
+        id:3,
+        name:"少年的你",
+        num:1051.90,
+        flag:false
+    },{
+        id:4,
+        name:"终结者",
+        num:443.90,
+        flag:false
+    },{
+        id:5,
+        name:"天气之子",
+        num:273.90,
+        flag:false
+    }],[{
+        id:1,
+        name:"决战中途岛",
+        num:1283,
+        flag:false
+    },{
+        id:2,
+        name:"受益人",
+        num:1238,
+        flag:false
+    },{
+        id:3,
+        name:"少年的你",
+        num:1051,
+        flag:false
+    },{
+        id:4,
+        name:"终结者",
+        num:443,
+        flag:false
+    },{
+        id:5,
+        name:"天气之子",
+        num:273,
+        flag:false
+    }]]
+})
+Mock.mock("/getlist","get",data)
