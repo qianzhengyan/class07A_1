@@ -1,0 +1,29 @@
+import Mock from "mockjs";
+let data = [
+    {
+        "address":"北京市海淀区八维研修学院",
+        "name":"浩楠",
+        "phone":"13031061118"
+    },
+    {
+        "address":"北京市海淀区八维研修学院",
+        "name":"浩楠",
+        "phone":"13031061118"
+    },
+    {
+        "address":"北京市海淀区八维研修学院",
+        "name":"浩楠",
+        "phone":"13031061118"
+    },
+    {
+        "address":"北京市海淀区八维研修学院",
+        "name":"浩楠",
+        "phone":"13031061118"
+    },
+    {
+        "address":"北京市海淀区八维研修学院",
+        "name":"浩楠",
+        "phone":"13031061118"
+    }
+]
+Mock.mock('/getdata','get',data)
